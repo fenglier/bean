@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="bean1" class="com.fengli.beans.Bean1"></bean>
+
+        <bean id="bean2" class="com.fengli.beanFactorys.Bean2Factory" factory-method="getInstance"></bean>
+
+        <bean id="bean3Factory" class="com.fengli.beanFactorys.Bean3Factory"></bean>
+        <bean id="bean3" factory-bean="bean3Factory" factory-method="getInstance"></bean>
+</beans>
